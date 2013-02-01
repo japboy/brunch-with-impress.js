@@ -1,0 +1,87 @@
+/**
+ * Brunch with impress.js
+ * ======================
+ *
+ * Copyright 2013 [Yu Inao][0] and distributed under [Public Domain][1]
+ *
+ * [0]: http://github.com/japboy
+ * [1]: http://creativecommons.org/licenses/publicdomain/
+ */
+
+
+@import 'nib'
+
+
+bgColor = rgb(255,255,255)
+bgSubColor = rgb(68,68,68)
+textColor = rgb(34,34,34)
+linkColor = rgb(0,102,153)
+symbolColor = rgb(217,117,11)
+
+baseMargin = 1em
+basePadding = 2em
+
+
+body
+  background-color: bgColor
+  color: textColor
+
+
+.impress-not-supported
+
+  .fallback-message
+    background-color: textColor
+    color: bgColor
+    display: block
+    padding: basePadding
+
+  .hint
+    display: none
+
+
+.impress-supported
+
+  .fallback-message
+    display: none
+
+  .hint
+    display: block
+    opacity: 0
+
+
+.impress-enabled
+
+  .hint
+    background-color: textColor
+    bottom: 10%
+    box-sizing: border-box
+    color: bgColor
+    left: 0
+    opacity: 0
+    position: fixed
+    text-align: center
+    transition: opacity 1s 3s
+    width: 100%
+
+.impress-on-bored
+
+  .hint
+    opacity: 1
+
+
+#impress
+
+  .step
+    box-sizing: border-box
+    //opacity: 0
+    padding: 10px
+    //transition: opacity 0.3s
+
+    &.active
+      border-bottom: bgSubColor dashed 3px
+      //opacity: 1
+      //transition: opacity 0.3s
+
+    h1
+      font-weight: bolder
+      text-transform: uppercase

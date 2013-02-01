@@ -1,0 +1,22 @@
+!!! 5
+html(lang='ja-JP')
+  head
+    meta(charset='UTF-8')
+    block title
+    block meta
+    block style
+  body.impress-not-supported
+    section.fallback-message
+      :markdown
+        Your browser **doesn't support the features required** by impress.js,
+        so you are presented with a simplified version of this presentation.
+
+        For the best experience please use the latest **Chrome**, **Safari**
+        or **Firefox** browser.
+
+    div#impress
+      block contents
+
+    section.hint
+      :markdown
+        Use a spacebar or arrow keys to navigate
